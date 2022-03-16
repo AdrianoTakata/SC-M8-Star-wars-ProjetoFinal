@@ -28,7 +28,7 @@ public class RebeldeController {
     }
 
     @GetMapping
-    public List<ResponseRebelde> mostrarListaRebeldes() {// o metodo com GET será o responsavel por enviar ao formuario o objeto a ser criado através do parametro model
+    public List<ResponseRebelde> mostrarListaRebeldes() {
         return ResponseRebelde.toResponse(rebeldeService.buscaTodosRebeldes());
     }
 
