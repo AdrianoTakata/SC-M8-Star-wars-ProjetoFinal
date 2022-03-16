@@ -1,5 +1,7 @@
 package br.com.letscode.javaweb.projetofinal.model;
 
+import br.com.letscode.javaweb.projetofinal.exception.ExcecaoNaoEncontrada;
+
 import java.util.*;
 
 public class BDRebeldes {
@@ -13,17 +15,12 @@ public class BDRebeldes {
         return BDRebeldes.rebeldeList;
     }
 
-    public Rebelde detalhesRebelde(UUID id) throws Exception {
-        Optional<Rebelde> resultRebelde = BDRebeldes.rebeldeList.stream().filter(rebelde -> Objects.equals(rebelde.getId(), id)).findAny();
-        if (resultRebelde.isPresent()) {
-            return resultRebelde.get();
-        } else {
-            throw new Exception("Rebelde não encontrado");
-        }
+    public Optional<Rebelde> detalhesRebelde(UUID id) {
+        return BDRebeldes.rebeldeList.stream().filter(rebelde -> Objects.equals(rebelde.getId(), id)).findAny();
     }
 
-    public Rebelde atualizaLocalizacao(UUID id, Localizacao localizacao) throws Exception {
-        BDRebeldes.rebeldeList.stream().filter(rebelde -> Objects.equals(rebelde.getId(), id))
+    public Optional<Rebelde> atualizaLocalizacao(UUID id, Localizacao localizacao) {
+         BDRebeldes.rebeldeList.stream().filter(rebelde -> Objects.equals(rebelde.getId(), id))
                 .forEach(rebelde -> {
                             rebelde.setLocalizacao(localizacao);
                         }
