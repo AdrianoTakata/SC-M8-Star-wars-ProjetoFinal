@@ -1,6 +1,5 @@
 package br.com.letscode.javaweb.projetofinal.utils;
 
-
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 import br.com.letscode.javaweb.projetofinal.model.Localizacao;

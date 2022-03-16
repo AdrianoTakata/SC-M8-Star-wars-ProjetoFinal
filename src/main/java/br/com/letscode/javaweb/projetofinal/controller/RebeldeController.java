@@ -2,7 +2,6 @@ package br.com.letscode.javaweb.projetofinal.controller;
 
 import br.com.letscode.javaweb.projetofinal.dto.RequestRebelde;
 import br.com.letscode.javaweb.projetofinal.dto.ResponseRebelde;
-import br.com.letscode.javaweb.projetofinal.model.Localizacao;
 import br.com.letscode.javaweb.projetofinal.model.Rebelde;
 import br.com.letscode.javaweb.projetofinal.service.RebeldeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,8 +12,6 @@ import org.springframework.web.util.UriComponentsBuilder;
 import javax.validation.Valid;
 import java.net.URI;
 import java.util.List;
-import java.util.Locale;
-import java.util.UUID;
 
 @RestController
 @RequestMapping("/rebelde")

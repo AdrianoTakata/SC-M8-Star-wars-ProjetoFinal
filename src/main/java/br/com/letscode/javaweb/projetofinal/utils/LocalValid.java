@@ -1,7 +1,5 @@
 package br.com.letscode.javaweb.projetofinal.utils;
 
-import org.springframework.context.i18n.LocaleContextHolder;
-
 import javax.validation.Constraint;
 import javax.validation.Payload;
 import java.lang.annotation.Retention;

@@ -1,7 +1,5 @@
 package br.com.letscode.javaweb.projetofinal.model;
 
-import br.com.letscode.javaweb.projetofinal.exception.ExcecaoNaoEncontrada;
-
 import java.util.*;
 
 public class BDRebeldes {
