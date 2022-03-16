@@ -21,7 +21,7 @@ public class RebeldeController {
     RebeldeService rebeldeService;
 
     @PostMapping
-    public ResponseEntity<ResponseRebelde> cadastro (@RequestBody @Valid RequestRebelde requestRebelde, UriComponentsBuilder uriComponentsBuilder) { // o metodo POST recebera o objeto criado e após ser aplicada a lógica necessária, enviará a resposta para outro html
+    public ResponseEntity<ResponseRebelde> cadastro(@RequestBody @Valid RequestRebelde requestRebelde, UriComponentsBuilder uriComponentsBuilder) { // o metodo POST recebera o objeto criado e após ser aplicada a lógica necessária, enviará a resposta para outro html
         Rebelde rebelde = rebeldeService.cadastraRebelde(requestRebelde);
         URI uri = uriComponentsBuilder.path("/cliente/{id}").buildAndExpand(rebelde.getId()).toUri();
         return ResponseEntity.created(uri).body(new ResponseRebelde(rebelde));
