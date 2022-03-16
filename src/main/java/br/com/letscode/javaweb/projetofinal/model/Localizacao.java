@@ -7,15 +7,14 @@ import lombok.Setter;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Positive;
 
 @Getter @Setter
 @AllArgsConstructor
 public class Localizacao {
-    @NotNull
+
     private Double latitude;
-    @NotNull
     private Double longitude;
-    @NotBlank
     private String nomeGalaxia;
 
     public Localizacao (Localizacao localizacao) {
